@@ -125,11 +125,11 @@ class Interface:
 
 
 
-def on_key_press(self,event):
+#def on_key_press(self,event):
     print("you pressed {}".format(event.key))
     key_press_handler(event, self.canvas, self.toolbar)
 
-def _quit(self):
+#def _quit(self):
     self.root.quit()     # stops mainloop
     self.root.destroy()  # this is necessary on Windows to prevent
                     # Fatal Python Error: PyEval_RestoreThread: NULL tstate
