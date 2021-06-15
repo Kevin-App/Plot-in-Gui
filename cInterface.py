@@ -5,6 +5,10 @@ from matplotlib.backend_bases import key_press_handler
 from matplotlib.figure import Figure
 import numpy as np
 
+class Interface:
+    def __init__(self) -> None:
+        pass
+
 
 root = tkinter.Tk()
 root.wm_title("Embedding in Tk")
