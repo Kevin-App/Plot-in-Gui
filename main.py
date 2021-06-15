@@ -1,5 +1,7 @@
+from cInterface import Interface
+
 def main():
-    print("Hello World!")
+    interface = Interface()
 
 if __name__ == "__main__":
     main()
