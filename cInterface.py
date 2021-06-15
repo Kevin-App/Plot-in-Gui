@@ -6,11 +6,6 @@ from matplotlib.backend_bases import key_press_handler
 from matplotlib.figure import Figure
 import numpy as np
 
-OPTIONS = [
-"Jan",
-"Feb",
-"Mar"
-]
 TEXT_WHITE_OFF = "#f0f0f0"
 BACKGROUND_MAIN_GRAY = "#2e3233"
 BACKGROUND_SUB_GRAY = "#242726"
@@ -30,30 +25,6 @@ class Interface:
         #Creating Plot
         self.__create_plot()
 
-
-        '''
-        variable = StringVar(frame1)
-        variable.set(OPTIONS[0]) # default value
-
-        w = OptionMenu(frame1, variable, *OPTIONS)
-        w.grid(row=1,column=1)
-        '''
-        '''self.window.wm_title("Embedding in Tk")
-        self.fig = Figure(figsize=(5, 4), dpi=100)
-        self.t = np.arange(0, 3, .01)
-        self.fig.add_subplot(111).plot(self.t, 2 * np.sin(2 * np.pi * self.t))
-        self.canvas = FigureCanvasTkAgg(self.fig, master=frame2)  # A tk.DrawingArea.
-        self.canvas.draw()
-        self.canvas.get_tk_widget().pack(side=tkinter.TOP, fill=tkinter.BOTH, expand=1)
-
-        self.toolbar = NavigationToolbar2Tk(self.canvas, frame2)
-        self.toolbar.update()
-        self.canvas.get_tk_widget().pack(side=tkinter.TOP, fill=tkinter.BOTH, expand=1)
-
-        self.canvas.mpl_connect("key_press_event", on_key_press)
-        button = tkinter.Button(master=frame2, text="Quit", command=_quit)
-        button.pack(side=tkinter.BOTTOM)
-        '''
         #Run Tkinter event loop
         self.window.mainloop()
 
@@ -119,18 +90,3 @@ class Interface:
 
         #Pack Canvas to Frame and make in Responsive
         self.canvas.get_tk_widget().pack(side=tkinter.TOP, fill=tkinter.BOTH, expand=1)
-
-
-
-
-
-
-#def on_key_press(self,event):
-    print("you pressed {}".format(event.key))
-    key_press_handler(event, self.canvas, self.toolbar)
-
-#def _quit(self):
-    self.root.quit()     # stops mainloop
-    self.root.destroy()  # this is necessary on Windows to prevent
-                    # Fatal Python Error: PyEval_RestoreThread: NULL tstate
-
