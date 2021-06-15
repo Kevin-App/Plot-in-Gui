@@ -1,2 +1,2 @@
-# Python-Plot-in-Gui
+# Plot-in-Gui
 Creating a Gui-Application with embedded Plot
